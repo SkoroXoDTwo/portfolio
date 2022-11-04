@@ -1,0 +1,84 @@
+.header {
+  padding: 30px 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: 1280px) {
+    & {
+      padding: 25px 60px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    & {
+      padding: 20px 30px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    & {
+      padding: 16px 16px;
+    }
+  }
+
+  &__logo {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    height: 40px;
+    width: 155px;
+    background: url(../../images/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include hover-opacity();
+
+    @media screen and (max-width: 550px) {
+      & {
+        height: 30px;
+        width: 100px;
+      }
+    }
+  }
+
+  &__menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @media screen and (max-width: 700px) {
+      & {
+        gap: 10px;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  &__menu-item {
+    text-decoration: none;
+    color: $white-color;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 29px;
+    @include hover-opacity;
+
+    &_active {
+      border-bottom: 1px solid $white-color;
+    }
+
+    @media screen and (max-width: 700px) {
+      & {
+        font-size: 16px;
+      }
+    }
+  }
+}
