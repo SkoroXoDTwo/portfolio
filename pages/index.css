@@ -409,3 +409,212 @@ template {
     font-size: 16px;
   }
 }
+
+.project {
+  padding: 30px 200px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  align-items: center;
+}
+@media screen and (max-width: 1280px) {
+  .project {
+    padding: 25px 60px 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .project {
+    gap: 30px;
+    padding: 20px 30px 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .project {
+    padding: 16px 16px;
+  }
+}
+.project__title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+@media screen and (max-width: 700px) {
+  .project__title {
+    font-size: 32px;
+  }
+}
+.project__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  display: grid;
+  -moz-column-gap: 70px;
+       column-gap: 70px;
+  row-gap: 40px;
+  grid-template-columns: repeat(auto-fill, 288px);
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 0 5px 2px #fff;
+  transform: translateY(-20px);
+}
+.card__img-link {
+  width: 100%;
+  text-decoration: none;
+}
+.card__img-link:hover {
+  cursor: pointer;
+}
+.card__img {
+  width: 100%;
+  height: 230px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top center;
+     object-position: top center;
+  border-radius: 20px 20px 0 0;
+  transition: object-position 1s;
+  transition: object-position 1s, -o-object-position 1s;
+}
+.card__img:hover {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
+.card__img_mobile {
+  transition: object-position 7s;
+  transition: object-position 7s, -o-object-position 7s;
+}
+.card__cover {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 16px;
+}
+.card__title {
+  padding: 0;
+  margin: 0 0 10px;
+  width: 100%;
+  color: #2A2A2A;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.card__text {
+  padding: 0;
+  margin: 0 0 20px;
+  width: 100%;
+  height: 78px;
+  color: #2A2A2A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card__more-btn {
+  padding: 0;
+  margin: 0 0 28px;
+  color: #2A2A2A;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: none;
+  transition: opacity 0.2s;
+}
+.card__more-btn:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.card__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.card__github {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.2s;
+}
+.card__github:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.card__github-icon {
+  height: 22px;
+  width: 22px;
+  background: url(../../images/github-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card__github-text {
+  margin: 0;
+  padding: 0;
+  color: #2A2A2A;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+.card__selector-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.card__selector-icon {
+  height: 22px;
+  width: 22px;
+  background: url(../../images/desctop-icon.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.card__selector-icon_mobile {
+  background: url(../../images/mobile-icon.svg);
+}
+.card__toggle {
+  width: 25px;
+  height: 12px;
+  background: #D9D9D9;
+  border-radius: 40px;
+  display: flex;
+  border: none;
+  align-items: center;
+  padding: 0 3px;
+  box-sizing: border-box;
+}
+.card__toggle:hover {
+  cursor: pointer;
+}
+.card__toggle_active {
+  justify-content: flex-end;
+}
+.card__toggle-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #2A2A2A;
+}

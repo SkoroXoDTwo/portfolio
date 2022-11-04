@@ -1,0 +1,169 @@
+.card {
+  width: 100%;
+  background: $white-color;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  transition: transform .2s, box-shadow .2s;
+
+  &:hover {
+    box-shadow: 0 0 5px 2px $white-color;
+    transform: translateY(-20px);
+  }
+
+  &__img-link {
+    width: 100%;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 20px 20px 0 0;
+    transition: object-position 1s;
+
+    &:hover {
+      object-position: bottom center;
+    }
+
+    &_mobile {
+      transition: object-position 7s;
+    }
+  }
+
+  &__cover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: $white-color;
+    border-radius: 0 0 20px 20px;
+    padding: 16px;
+  }
+
+
+
+  &__title {
+    padding: 0;
+    margin: 0 0 10px;
+    width: 100%;
+    color: $grey-color;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__text {
+    padding: 0;
+    margin: 0 0 20px;
+    width: 100%;
+    height: 78px;
+    color: $grey-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  &__more-btn {
+    padding: 0;
+    margin: 0 0 28px;
+    color: $grey-color;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background: none;
+    @include hover-opacity;
+  }
+
+  &__footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__github {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    @include hover-opacity;
+  }
+
+  &__github-icon {
+    height: 22px;
+    width: 22px;
+    background: url(../../images/github-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__github-text {
+    margin: 0;
+    padding: 0;
+    color: $grey-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__selector-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  }
+
+  &__selector-icon {
+    height: 22px;
+    width: 22px;
+    background: url(../../images/desctop-icon.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &_mobile {
+      background: url(../../images/mobile-icon.svg);
+    }
+  }
+
+  &__toggle {
+    width: 25px;
+    height: 12px;
+    background: #D9D9D9;
+    border-radius: 40px;
+    display: flex;
+    border: none;
+    align-items: center;
+    padding: 0 3px;
+    box-sizing: border-box;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &_active {
+      justify-content: flex-end;
+    }
+  }
+
+  &__toggle-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $grey-color;
+  }
+}
