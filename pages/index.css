@@ -459,6 +459,23 @@ template {
   justify-content: center;
 }
 
+@-webkit-keyframes scale-anim {
+  to {
+    transform: scaleX(0);
+  }
+  from {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes scale-anim {
+  to {
+    transform: scaleX(0);
+  }
+  from {
+    transform: scaleX(1);
+  }
+}
 .card {
   width: 100%;
   background: #fff;
@@ -579,6 +596,11 @@ template {
   font-weight: 400;
   font-size: 12px;
   line-height: 15px;
+  display: none;
+}
+.card__github-text_hover {
+  display: inline;
+  animation: 0.2s linear 0s reverse forwards scale-anim;
 }
 .card__selector-container {
   display: flex;
@@ -605,6 +627,7 @@ template {
   align-items: center;
   padding: 0 3px;
   box-sizing: border-box;
+  justify-content: flex-start;
 }
 .card__toggle:hover {
   cursor: pointer;

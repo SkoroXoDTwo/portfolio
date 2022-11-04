@@ -1,3 +1,12 @@
+@keyframes scale-anim {
+  to {
+    transform: scaleX(0);
+  }
+  from {
+    transform: scaleX(1);
+  }
+}
+
 .card {
   width: 100%;
   background: $white-color;
@@ -120,6 +129,12 @@
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
+    display: none;
+
+    &_hover {
+      display: inline;
+      animation: .2s linear 0s reverse forwards scale-anim;
+    }
   }
 
   &__selector-container {
@@ -150,6 +165,7 @@
     align-items: center;
     padding: 0 3px;
     box-sizing: border-box;
+    justify-content: flex-start;
 
     &:hover {
       cursor: pointer;
