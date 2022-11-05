@@ -35,14 +35,13 @@
     object-fit: cover;
     object-position: top center;
     border-radius: 20px 20px 0 0;
-    transition: object-position 1s;
 
     &:hover {
       object-position: bottom center;
     }
 
     &_mobile {
-      transition: object-position 7s;
+
     }
   }
 
@@ -54,8 +53,6 @@
     border-radius: 0 0 20px 20px;
     padding: 16px;
   }
-
-
 
   &__title {
     padding: 0;
