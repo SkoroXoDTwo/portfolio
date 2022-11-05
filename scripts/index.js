@@ -20,6 +20,14 @@ cards.forEach((card) => {
   const cardGithubText = card.querySelector('.card__github-text');
   const cardImg = card.querySelector('.card__img');
 
+  cardImg.addEventListener("touchstart", () => {
+    cardImg.classList.add('card__img_scroll');
+  });
+
+  cardImg.addEventListener("touchend", () => {
+    cardImg.classList.remove('card__img_scroll');
+  });
+
   changedSpeedCardScroll(img, cardImg, 0.0005);
 
   cardGithubIcon.addEventListener('mouseover', () => {

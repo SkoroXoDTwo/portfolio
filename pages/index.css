@@ -508,6 +508,10 @@ template {
   -o-object-position: bottom center;
      object-position: bottom center;
 }
+.card__img_scroll {
+  -o-object-position: bottom center;
+     object-position: bottom center;
+}
 .card__cover {
   display: flex;
   flex-direction: column;
