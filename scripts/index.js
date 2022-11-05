@@ -19,13 +19,12 @@ cards.forEach((card) => {
   const cardGithubIcon = card.querySelector('.card__github-icon');
   const cardGithubText = card.querySelector('.card__github-text');
   const cardImg = card.querySelector('.card__img');
+  const cardImgScrollBtn = card.querySelector('.card__img-scroll');
 
-  cardImg.addEventListener("touchstart", () => {
-    cardImg.classList.add('card__img_scroll');
-  });
+  console.log(cardImgScrollBtn);
 
-  cardImg.addEventListener("touchend", () => {
-    cardImg.classList.remove('card__img_scroll');
+  cardImgScrollBtn.addEventListener("click", () => {
+    cardImg.classList.toggle('card__img_scroll');
   });
 
   changedSpeedCardScroll(img, cardImg, 0.0005);

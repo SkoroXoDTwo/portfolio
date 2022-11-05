@@ -355,7 +355,7 @@ template {
   text-decoration: none;
   height: 40px;
   width: 155px;
-  background: url(../../images/logo.svg);
+  background: url(../images/logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
@@ -488,9 +488,13 @@ template {
   box-shadow: 0 0 5px 2px #fff;
   transform: translateY(-20px);
 }
+.card__img-container {
+  position: relative;
+}
 .card__img-link {
   width: 100%;
   text-decoration: none;
+  position: relative;
 }
 .card__img-link:hover {
   cursor: pointer;
@@ -511,6 +515,28 @@ template {
 .card__img_scroll {
   -o-object-position: bottom center;
      object-position: bottom center;
+}
+.card__img_scroll:hover {
+  -o-object-position: top center;
+     object-position: top center;
+}
+.card__img-scroll {
+  background: url(../images/card-img-scroll.svg);
+  height: 27px;
+  width: 38px;
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  border: none;
+  display: none;
+}
+@media screen and (max-width: 760px) {
+  .card__img-scroll {
+    display: block;
+  }
+}
+.card__img-scroll:hover {
+  cursor: pointer;
 }
 .card__cover {
   display: flex;
@@ -583,7 +609,7 @@ template {
 .card__github-icon {
   height: 22px;
   width: 22px;
-  background: url(../../images/github-icon.svg);
+  background: url(../images/github-icon.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -608,12 +634,12 @@ template {
 .card__selector-icon {
   height: 22px;
   width: 22px;
-  background: url(../../images/desctop-icon.svg);
+  background: url(../images/desctop-icon.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 .card__selector-icon_mobile {
-  background: url(../../images/mobile-icon.svg);
+  background: url(../images/mobile-icon.svg);
 }
 .card__toggle {
   width: 25px;

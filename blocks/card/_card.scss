@@ -20,9 +20,14 @@
     transform: translateY(-20px);
   }
 
+  &__img-container {
+    position: relative;
+  }
+
   &__img-link {
     width: 100%;
     text-decoration: none;
+    position: relative;
 
     &:hover {
       cursor: pointer;
@@ -42,6 +47,31 @@
 
     &_scroll {
       object-position: bottom center;
+
+      &:hover {
+        object-position: top center;
+      }
+    }
+  }
+
+  &__img-scroll {
+    background: url(../images/card-img-scroll.svg);
+    height: 27px;
+    width: 38px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    border: none;
+    display: none;
+
+    @media screen and (max-width: 760px) {
+      & {
+        display: block;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -114,7 +144,7 @@
   &__github-icon {
     height: 22px;
     width: 22px;
-    background: url(../../images/github-icon.svg);
+    background: url(../images/github-icon.svg);
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -143,12 +173,12 @@
   &__selector-icon {
     height: 22px;
     width: 22px;
-    background: url(../../images/desctop-icon.svg);
+    background: url(../images/desctop-icon.svg);
     background-size: contain;
     background-repeat: no-repeat;
 
     &_mobile {
-      background: url(../../images/mobile-icon.svg);
+      background: url(../images/mobile-icon.svg);
     }
   }
 
