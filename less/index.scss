@@ -4,7 +4,7 @@
 
 @import '../less/variables';
 
-@import '../less/mixins/hover-opacity.scss';
+@import '../less/mixins/hover-opacity';
 
 @import '../blocks/body/body';
 
@@ -14,4 +14,6 @@
 
 @import '../blocks/project/project';
 
-@import '../blocks/card/card.scss';
+@import '../blocks/card/card';
+
+@import '../blocks/contacts/contacts';

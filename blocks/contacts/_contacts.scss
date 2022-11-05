@@ -1,0 +1,105 @@
+@keyframes box-shadow-anim {
+  to {
+    box-shadow: 0 0 5px 0 $white-color;
+  }
+  from {
+    box-shadow: 0 0 5px 5px $white-color;
+  }
+}
+
+.contacts {
+  padding: 0 200px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+
+  @media screen and (max-width: 1280px) {
+    & {
+      padding: 0 60px 50px;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    & {
+      gap: 30px;
+      padding: 0 30px 30px;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    & {
+      padding: 16px 16px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    @media screen and (max-width: 700px) {
+      & {
+        font-size: 32px;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    padding: 20px;
+    border-radius: 40px;
+    background: url(../images/contacts-bg.gif);
+    background-position: center;
+    animation: 2s linear 0s alternate infinite box-shadow-anim;
+    box-sizing: border-box;
+
+    @media screen and (max-width: 550px) {
+      & {
+        padding: 10px;
+      }
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+  }
+
+  &__link-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform .2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-10px);
+    }
+
+    @media screen and (max-width: 550px) {
+      & {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

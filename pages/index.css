@@ -492,6 +492,8 @@ template {
   position: relative;
 }
 .card__img-link {
+  margin: 0;
+  padding: 0;
   width: 100%;
   text-decoration: none;
   position: relative;
@@ -664,4 +666,107 @@ template {
   height: 10px;
   border-radius: 50%;
   background: #2A2A2A;
+}
+
+@-webkit-keyframes box-shadow-anim {
+  to {
+    box-shadow: 0 0 5px 0 #fff;
+  }
+  from {
+    box-shadow: 0 0 5px 5px #fff;
+  }
+}
+
+@keyframes box-shadow-anim {
+  to {
+    box-shadow: 0 0 5px 0 #fff;
+  }
+  from {
+    box-shadow: 0 0 5px 5px #fff;
+  }
+}
+.contacts {
+  padding: 0 200px 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (max-width: 1280px) {
+  .contacts {
+    padding: 0 60px 50px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .contacts {
+    gap: 30px;
+    padding: 0 30px 30px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contacts {
+    padding: 16px 16px;
+  }
+}
+.contacts__title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+}
+@media screen and (max-width: 700px) {
+  .contacts__title {
+    font-size: 32px;
+  }
+}
+.contacts__container {
+  width: 100%;
+  padding: 20px;
+  border-radius: 40px;
+  background: url(../images/contacts-bg.gif);
+  background-position: center;
+  -webkit-animation: 2s linear 0s alternate infinite box-shadow-anim;
+          animation: 2s linear 0s alternate infinite box-shadow-anim;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 550px) {
+  .contacts__container {
+    padding: 10px;
+  }
+}
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+}
+.contacts__link {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.contacts__link-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.2s;
+}
+.contacts__link-icon:hover {
+  cursor: pointer;
+  transform: translateY(-10px);
+}
+@media screen and (max-width: 550px) {
+  .contacts__link-icon {
+    width: 60px;
+    height: 60px;
+  }
 }
