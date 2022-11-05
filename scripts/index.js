@@ -1,6 +1,21 @@
 const cards = document.querySelectorAll('.card');
 
 
+
+function addEventListenerBurgerBtn () {
+  const burgerBtn = document.querySelector('.header__burger');
+  const popupMenu = document.querySelector('.popup-menu');
+  const headerLogo = document.querySelector('.header__logo');
+
+  burgerBtn.addEventListener('click', () => {
+    popupMenu.classList.toggle('popup-menu_opened');
+    burgerBtn.classList.toggle('header__burger_close');
+    headerLogo.classList.toggle('header__logo_fixed');
+  });
+}
+
+addEventListenerBurgerBtn();
+
 function changedSpeedCardScroll (img, cardImg, speed) {
   img.src = cardImg.src;
 

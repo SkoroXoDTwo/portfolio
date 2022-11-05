@@ -1,0 +1,42 @@
+.popup-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background: $grey-color;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: display .2s;
+
+  &_opened {
+    display: flex;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__list-item {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: $white-color;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 58px;
+    @include hover-opacity;
+
+    &_active {
+      border-bottom: 1px solid $white-color;
+    }
+  }
+}

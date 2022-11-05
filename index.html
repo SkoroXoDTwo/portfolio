@@ -25,7 +25,25 @@
             <a class="header__menu-item">Технологии</a>
           </li>
         </ul>
+
+        <button class="header__burger"></button>
       </nav>
+
+      <div class="popup-menu">
+        <nav>
+          <ul class="popup-menu__list">
+            <li>
+              <a class="popup-menu__list-item popup-menu__list-item_active">Главная</a>
+            </li>
+            <li>
+              <a class="popup-menu__list-item">Обо мне</a>
+            </li>
+            <li>
+              <a class="popup-menu__list-item">Технологии</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -127,6 +145,34 @@
               </div>
             </article>
           </li>
+
+          <li>
+            <article class="card">
+              <div class="card__img-container">
+                <a class="card__img-link" href="https://skoroxodtwo.github.io/how-to-learn/">
+                  <img class="card__img" src="./images/project-how-to-learn.png">
+                </a>
+                <button class="card__img-scroll"></button>
+              </div>
+              <div class="card__cover">
+                <h2 class="card__title">How to learn</h2>
+                <p class="card__text">
+                  Первый опыт в верстке одностраничного сайта.
+                  На сайте обзор различных современных техник обучения.
+                </p>
+                <button class="card__more-btn">Подробнее...</button>
+                <div class="card__footer">
+                  <a class="card__github" href="https://github.com/SkoroXoDTwo/how-to-learn">
+                    <span class="card__github-icon"></span>
+                    <p class="card__github-text">Cсылка на GitHub</p>
+                  </a>
+                  <nav class="card__selector-container">
+                    <div class="card__selector-icon"></div>
+                  </nav>
+                </div>
+              </div>
+            </article>
+          </li>
         </ul>
       </section>
 
@@ -153,6 +199,10 @@
         </div>
       </section>
     </main>
+    <footer class="footer">
+      <p class="footer__copyrigth">&copy; 2022</p>
+      <a class="footer__github-link" href="https://github.com/SkoroXoDTwo">Ссылка на Github</a>
+    </footer>
   </div>
 </body>
 </html>
