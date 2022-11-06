@@ -32,6 +32,7 @@
     @media screen and (max-width: 700px) {
       & {
         font-size: 32px;
+        margin: 0;
       }
     }
   }
@@ -45,12 +46,13 @@
     grid-template-columns: repeat(4, 1fr);
     border-bottom: 1px solid #D9D9D9;
     align-items: center;
+    gap: 10px;
 
     @media screen and (max-width: 900px) {
       & {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, auto);
-        gap: 10px;
+
       }
     }
 
@@ -62,6 +64,14 @@
 
       &:first-of-type {
         display: none;
+      }
+    }
+  }
+
+  &__row-item {
+    @media screen and (max-width: 700px) {
+      &:first-of-type {
+        grid-row: 2/3;
       }
     }
   }
@@ -84,5 +94,20 @@
     font-size: 16px;
     line-height: 1.54;
     text-align: center;
+
+    @media screen and (max-width: 700px) {
+      & {
+        text-align: left;
+      }
+    }
+
+    &_name-company {
+      @media screen and (max-width: 700px) {
+        & {
+          font-size: 24px;
+          font-weight: 700;
+        }
+      }
+    }
   }
 }

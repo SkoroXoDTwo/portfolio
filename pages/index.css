@@ -901,6 +901,7 @@ template {
 @media screen and (max-width: 700px) {
   .job__title {
     font-size: 32px;
+    margin: 0;
   }
 }
 .job__row {
@@ -912,12 +913,12 @@ template {
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid #D9D9D9;
   align-items: center;
+  gap: 10px;
 }
 @media screen and (max-width: 900px) {
   .job__row {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 10px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -927,6 +928,11 @@ template {
   }
   .job__row:first-of-type {
     display: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  .job__row-item:first-of-type {
+    grid-row: 2/3;
   }
 }
 .job__subtitle {
@@ -946,6 +952,17 @@ template {
   font-size: 16px;
   line-height: 1.54;
   text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .job__text {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 700px) {
+  .job__text_name-company {
+    font-size: 24px;
+    font-weight: 700;
+  }
 }
 
 @-webkit-keyframes box-shadow-anim {
