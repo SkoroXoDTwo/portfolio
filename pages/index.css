@@ -322,6 +322,9 @@ template {
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
 }
+.body_popup-menu {
+  overflow: hidden;
+}
 
 .page {
   max-width: 1440px;
@@ -372,11 +375,6 @@ template {
     height: 30px;
     width: 100px;
   }
-}
-.header__logo_fixed {
-  position: fixed;
-  left: 16px;
-  top: 16px;
 }
 .header__menu {
   margin: 0;
@@ -457,9 +455,6 @@ template {
   transition: transform 0.4s;
 }
 .header__burger_close {
-  position: fixed;
-  right: 16px;
-  top: 24px;
   border-top: none;
 }
 .header__burger_close::after {

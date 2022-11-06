@@ -3,14 +3,14 @@ const cards = document.querySelectorAll('.card');
 
 
 function addEventListenerBurgerBtn () {
-  const burgerBtn = document.querySelector('.header__burger');
-  const popupMenu = document.querySelector('.popup-menu');
-  const headerLogo = document.querySelector('.header__logo');
+  const bodyBlock = document.querySelector('.body');
+  const burgerBtn = bodyBlock.querySelector('.header__burger');
+  const popupMenu = bodyBlock.querySelector('.popup-menu');
 
   burgerBtn.addEventListener('click', () => {
+    bodyBlock.classList.toggle('body_popup-menu');
     popupMenu.classList.toggle('popup-menu_opened');
     burgerBtn.classList.toggle('header__burger_close');
-    headerLogo.classList.toggle('header__logo_fixed');
   });
 }
 
@@ -35,8 +35,6 @@ cards.forEach((card) => {
   const cardGithubText = card.querySelector('.card__github-text');
   const cardImg = card.querySelector('.card__img');
   const cardImgScrollBtn = card.querySelector('.card__img-scroll');
-
-  console.log(cardImgScrollBtn);
 
   cardImgScrollBtn.addEventListener("click", () => {
     cardImg.classList.toggle('card__img_scroll');

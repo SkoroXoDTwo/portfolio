@@ -41,12 +41,6 @@
         width: 100px;
       }
     }
-
-    &_fixed {
-      position: fixed;
-      left: 16px;
-      top: 16px;
-    }
   }
 
   &__menu {
@@ -130,9 +124,6 @@
     }
 
     &_close {
-      position: fixed;
-      right: 16px;
-      top: 24px;
       border-top: none;
 
       &::after {
