@@ -1,7 +1,5 @@
 const cards = document.querySelectorAll('.card');
 
-
-
 function addEventListenerBurgerBtn () {
   const bodyBlock = document.querySelector('.body');
   const burgerBtn = bodyBlock.querySelector('.header__burger');
@@ -55,13 +53,13 @@ cards.forEach((card) => {
 
       if(cardToggle.classList.contains('card__toggle_active')) {
         const cardImgLink = cardImg.src.slice(0, cardImg.src.length - 11);
-        cardImg.src = `${cardImgLink}.png`;
+        cardImg.src = `${cardImgLink}.jpg`;
         changedSpeedCardScroll(img, cardImg, 0.0005);
         cardToggle.classList.remove('card__toggle_active');
       }
       else {
         const cardImgLink = cardImg.src.slice(0, cardImg.src.length - 4);
-        cardImg.src = `${cardImgLink}-mobile.png`;
+        cardImg.src = `${cardImgLink}-mobile.jpg`;
         changedSpeedCardScroll(img, cardImg, 0.001);
         cardToggle.classList.add('card__toggle_active');
       }
