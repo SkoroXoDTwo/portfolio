@@ -6,7 +6,7 @@
   <base target="_blank">
   <title>Portfolio</title>
   <link rel="stylesheet" href="./pages/index.css">
-  <script defer src="./scripts/index.js"></script>
+  <script defer type="module" src="./scripts/index.js"></script>
 </head>
 <body class="body">
   <div class="page">
@@ -50,129 +50,7 @@
       <section class="project">
         <h1 class="project__title">Мои проекты</h1>
         <ul class="project__list">
-          <li>
-            <article class="card">
-              <div class="card__img-container">
-                <a class="card__img-link" href="https://skoroxodtwo.github.io/mesto/">
-                  <img class="card__img" src="./images/project-mesto.jpg" alt="Скриншот страницы проекта Место">
-                </a>
-                <button class="card__img-scroll"></button>
-              </div>
-              <div class="card__cover">
-                <h2 class="card__title">Mesto Russian</h2>
-                <p class="card__text">
-                  Место- сайт, где можно делиться фотографиями.
-                  Есть функция удаления, увеличения фото. Страница адаптивная.
-                </p>
-                <button class="card__more-btn">Подробнее...</button>
-                <div class="card__footer">
-                  <a class="card__github" href="https://github.com/SkoroXoDTwo/mesto">
-                    <span class="card__github-icon"></span>
-                    <p class="card__github-text">Cсылка на GitHub</p>
-                  </a>
-                  <nav class="card__selector-container">
-                    <div class="card__selector-icon"></div>
-                    <button class="card__toggle">
-                      <span class="card__toggle-circle"></span>
-                    </button>
-                    <div class="card__selector-icon card__selector-icon_mobile"></div>
-                  </nav>
-                </div>
-              </div>
-            </article>
-          </li>
 
-          <li>
-            <article class="card">
-              <div class="card__img-container">
-                <a class="card__img-link" href="https://skoroxodtwo.github.io/todo-list/">
-                  <img class="card__img" src="./images/project-todo-list.jpg"  alt="Скриншот страницы проекта Туду Лисит">
-                </a>
-                <button class="card__img-scroll"></button>
-              </div>
-
-              <div class="card__cover">
-                <h2 class="card__title">TodoList</h2>
-                <p class="card__text">
-                  Сайт для создания задач. Задачи можно респределять по группа.
-                  Так же, задачи и группы можно редактировать.
-                </p>
-                <button class="card__more-btn">Подробнее...</button>
-                <div class="card__footer">
-                  <a class="card__github" href="https://github.com/SkoroXoDTwo/todo-list">
-                    <span class="card__github-icon"></span>
-                    <p class="card__github-text">Cсылка на GitHub</p>
-                  </a>
-                  <nav class="card__selector-container">
-                    <div class="card__selector-icon"></div>
-                    <button class="card__toggle">
-                      <span class="card__toggle-circle"></span>
-                    </button>
-                    <div class="card__selector-icon card__selector-icon_mobile"></div>
-                  </nav>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="card">
-              <div class="card__img-container">
-                <a class="card__img-link" href="https://skoroxodtwo.github.io/cult-test-task/">
-                  <img class="card__img" src="./images/project-polair.jpg" alt="Скриншот страницы проекта Полаир">
-                </a>
-                <button class="card__img-scroll"></button>
-              </div>
-              <div class="card__cover">
-                <h2 class="card__title">Polair</h2>
-                <p class="card__text">
-                  Лэндинг производителя профессионального холодильного оборудования
-                </p>
-                <button class="card__more-btn">Подробнее...</button>
-                <div class="card__footer">
-                  <a class="card__github" href="https://github.com/SkoroXoDTwo/cult-test-task">
-                    <span class="card__github-icon"></span>
-                    <p class="card__github-text">Cсылка на GitHub</p>
-                  </a>
-                  <nav class="card__selector-container">
-                    <div class="card__selector-icon"></div>
-                    <button class="card__toggle">
-                      <span class="card__toggle-circle"></span>
-                    </button>
-                    <div class="card__selector-icon card__selector-icon_mobile"></div>
-                  </nav>
-                </div>
-              </div>
-            </article>
-          </li>
-
-          <li>
-            <article class="card">
-              <div class="card__img-container">
-                <a class="card__img-link" href="https://skoroxodtwo.github.io/how-to-learn/">
-                  <img class="card__img" src="./images/project-how-to-learn.jpg"  alt="Скриншот страницы проекта Научиться учиться">
-                </a>
-                <button class="card__img-scroll"></button>
-              </div>
-              <div class="card__cover">
-                <h2 class="card__title">How to learn</h2>
-                <p class="card__text">
-                  Первый опыт в верстке одностраничного сайта.
-                  На сайте обзор различных современных техник обучения.
-                </p>
-                <button class="card__more-btn">Подробнее...</button>
-                <div class="card__footer">
-                  <a class="card__github" href="https://github.com/SkoroXoDTwo/how-to-learn">
-                    <span class="card__github-icon"></span>
-                    <p class="card__github-text">Cсылка на GitHub</p>
-                  </a>
-                  <nav class="card__selector-container">
-                    <div class="card__selector-icon"></div>
-                  </nav>
-                </div>
-              </div>
-            </article>
-          </li>
         </ul>
       </section>
 
@@ -204,5 +82,49 @@
       <a class="footer__github-link" href="https://github.com/SkoroXoDTwo">Ссылка на Github</a>
     </footer>
   </div>
+
+  <template id="card-item-template">
+    <li class="card__list-element">
+      <article class="card">
+        <div class="card__img-container">
+          <a class="card__img-link" href="">
+            <img class="card__img" src=""
+             alt="">
+          </a>
+          <button class="card__img-scroll"></button>
+        </div>
+        <div class="card__cover">
+          <h2 class="card__title"></h2>
+          <p class="card__text">
+
+          </p>
+          <button class="card__more-btn">Подробнее...</button>
+          <div class="card__footer">
+            <a class="card__github" href="">
+              <span class="card__github-icon"></span>
+              <p class="card__github-text">Cсылка на GitHub</p>
+            </a>
+
+          </div>
+        </div>
+      </article>
+    </li>
+  </template>
+
+  <template id="card-toggle-adaptive-template">
+    <nav class="card__selector-container">
+      <div class="card__selector-icon"></div>
+      <button class="card__toggle">
+        <span class="card__toggle-circle"></span>
+      </button>
+      <div class="card__selector-icon card__selector-icon_mobile"></div>
+    </nav>
+  </template>
+
+  <template id="card-toggle-desctop-template">
+    <nav class="card__selector-container">
+      <div class="card__selector-icon"></div>
+    </nav>
+  </template>
 </body>
 </html>
