@@ -19,8 +19,7 @@ export class Card {
     this._imgClass.onload = function() {
       const height = this.height;
 
-      imgElement.style = `transition: object-position ${height * speed}s,
-       -o-object-position ${height * speed}s`;
+      imgElement.style = `transition: object-position ${height * speed}s`;
     }
   }
 
