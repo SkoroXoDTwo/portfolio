@@ -19,11 +19,11 @@ export class CardAdptive extends Card {
 
       if(toggleIsActive) {
         this._imgElement.src = this._linkImgMobile;
-        super._changeCardScrollSpeed(0.001);
+        super._changeScrollSpeed(0.001);
       }
       else {
-        this._imgElement.src = this._linkImgDesctop;
-        super._changeCardScrollSpeed(0.0005);
+        this._imgElement.src = this._linkImgDesktop;
+        super._changeScrollSpeed(0.0005);
       }
     });
   }
@@ -33,7 +33,7 @@ export class CardAdptive extends Card {
 
     this._toggleBtnElement = this._toggleElement.querySelector('.card__toggle');
 
-    super._changeCardScrollSpeed(0.0005);
+    super._changeScrollSpeed(0.0005);
     this._addEventListener();
 
     return this._element;

@@ -1,25 +1,22 @@
 export class Card {
   constructor(data, template) {
-    this._name = data.name,
-    this._text = data.text,
-    this._textMore = data.textMore,
-    this._textMore = data.textMore,
+    this._title = data.title,
+    this._summary = data.summary,
+    this._description = data.description,
     this._linkPage = data.linkPage,
     this._linkGithub = data.linkGithub,
     this._templateCard = template.card,
-    this._linkImgDesctop = data.linkImgDesctop,
+    this._linkImgDesktop = data.linkImgDesktop,
     this._imgClass = new Image();
   }
 
-   _changeCardScrollSpeed(speed) {
+   _changeScrollSpeed(speed) {
     this._imgClass.src = this._imgElement.src;
 
-    const imgElement = this._imgElement;
+    this._imgClass.onload = ()  => {
+      const height = this._imgClass.height;
 
-    this._imgClass.onload = function() {
-      const height = this.height;
-
-      imgElement.style = `transition: object-position ${height * speed}s`;
+      this._imgElement.style = `transition: object-position ${height * speed}s`;
     }
   }
 
@@ -74,9 +71,9 @@ export class Card {
     this._iconGithubElement = this._linkGithubElement.querySelector('.card__github-icon');
     this._textGithubElement = this._linkGithubElement.querySelector('.card__github-text');
 
-    this._imgElement.src = this._linkImgDesctop;
-    this._nameElement.textContent = this._name;
-    this._textElement.textContent = this._text;
+    this._imgElement.src = this._linkImgDesktop;
+    this._nameElement.textContent = this._title;
+    this._textElement.textContent = this._summary;
     this._linkPageElement.href = this._linkPage;
     this._linkGithubElement.href = this._linkGithub;
 
