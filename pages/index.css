@@ -965,6 +965,26 @@ template {
   }
 }
 
+.plug {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+.plug__title {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  .plug__title {
+    font-size: 32px;
+  }
+}
+
 @-webkit-keyframes box-shadow-anim {
   to {
     box-shadow: 0 0 5px 0 #fff;
@@ -1065,6 +1085,9 @@ template {
   .contacts__link-icon {
     width: 60px;
     height: 60px;
+  }
+  .contacts__link-icon:hover {
+    transform: translateY(-5px);
   }
 }
 
